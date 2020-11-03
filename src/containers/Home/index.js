@@ -3,8 +3,8 @@ import {
   Box,
 } from '@chakra-ui/core'
 
-import Header from '../../componets/Header'
-import Footer from '../../componets/Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import InfoMeetup from './components/InfoMeetup'
 import NextMeetup from './components/NextMeetup'
 import AboutMeetup from './components/AboutMeetup'
