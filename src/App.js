@@ -1,19 +1,20 @@
-import Home from './containers/Home'
+import { ThemeProvider, CSSReset, theme } from "@chakra-ui/core";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import {
-  ThemeProvider,
-  CSSReset,
-  theme,
-} from '@chakra-ui/core'
+import Home from "./containers/Home";
+import Login from "./containers/Login";
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <CSSReset />
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <CSSReset />
 
-      <Home />
-    </ThemeProvider>
-  );
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
+);
 
 export default App;
