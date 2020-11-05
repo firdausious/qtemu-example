@@ -1,6 +1,14 @@
 import React from "react";
 
-import { Box, Text, Button, Heading, Divider } from "@chakra-ui/core";
+import { Box, Button, Heading, Divider } from "@chakra-ui/core";
+
+import MeetupThumbnails from '../../../../components/MeetupThumbnails'
+
+const meetupData = [
+  { title: '#39 JakartaJS April Meetup' },
+  { title: '#39 JakartaJS April Meetup' },
+  { title: '#39 JakartaJS April Meetup' }
+]
 
 const PastMeetup = () => {
   return (
@@ -9,9 +17,7 @@ const PastMeetup = () => {
       <Box>
         <Box>
           <Box>
-            <Text>Text value</Text>
-            <Text>Text value</Text>
-            <Text>Text value</Text>
+            <MeetupThumbnails items={meetupData} />
             <Button>Button text</Button>
             <Divider borderColor="blackAlpha.500" />
           </Box>
